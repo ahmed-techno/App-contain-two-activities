@@ -9,13 +9,13 @@ import com.ahmedtechno93.app_contain_two_activities.databinding.ActivityMainBind
 class MainActivity:BaseActivity<ActivityMainBinding>() {
     override val LOG_TAG: String="MAIN_ACTIVITY"
     override val bindingInflater: (LayoutInflater) -> ActivityMainBinding =ActivityMainBinding::inflate
-}
 
-    private fun addCallbacks() {
-        binding.button.setOnClickListener {
+    override fun addCallbacks() {
+        binding?.apply {  }
+        binding?.button?.setOnClickListener {
             val intent = Intent(this, SecondActivity::class.java)
 
-            val user = User(binding.textName.text.toString(), 27)
+            val user = User(binding!!!!.textName.text.toString(), 27)
             intent.putExtra(Constant.user, user)
             startActivity(intent)
         }
