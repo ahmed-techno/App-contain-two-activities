@@ -1,20 +1,15 @@
 package com.ahmedtechno93.app_contain_two_activities.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import android.view.LayoutInflater
 import com.ahmedtechno93.app_contain_two_activities.data.Constant
 import com.ahmedtechno93.app_contain_two_activities.data.User
 import com.ahmedtechno93.app_contain_two_activities.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding=ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        addCallbacks()
-    }
+class MainActivity:BaseActivity<ActivityMainBinding>() {
+    override val LOG_TAG: String="MAIN_ACTIVITY"
+    override val bindingInflater: (LayoutInflater) -> ActivityMainBinding =ActivityMainBinding::inflate
+}
 
     private fun addCallbacks() {
         binding.button.setOnClickListener {
