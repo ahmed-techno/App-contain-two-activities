@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">App_Contain_Two_Activities</string>
+    <string name="navigate_to_second_activity">navigate to second activity</string>
+    <string name="aecond_activity">Aecond Activity</string>
+    <string name="close_activity">Close Activity</string>
+    <string name="second_activity">Second Activity</string>
 </resources>
